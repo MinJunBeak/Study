@@ -92,8 +92,28 @@ public class study {
         System.out.println(s1.contains("Java")); // 특정 문자열 포함여부
         System.out.println(s1.charAt(6)); // 해당 인덱스에 있는 문자열 출력
         System.out.println(s1.replaceAll("Java", "World"));
-
         System.out.println(s1.substring(6));
+        System.out.println(s1.substring(0, 5));
+        System.out.println(s1.toUpperCase());
+        String s4 = "a:b:c:d";
+//        String[] result = s4.split(":");
+
+        System.out.println(String.format("I eat %d apples.", 3));
+        System.out.println(String.format("I eat %s apples.", "five"));
+//        System.out.println(String.format("I eat %d apples.", s2));
+        System.out.println(String.format("I eat %s apples. %s", s2, s1));
+        System.out.println(String.format("%10sjane.", "hi"));
+        System.out.println(String.format("%-10sjane.", "hi"));
+        System.out.println(String.format("%10.4f", 3.42134234));
+        StringBuffer sb = new StringBuffer();
+        sb.append("hello");
+        sb.append(" ");
+        sb.append("jump to java");
+        sb.insert(0, "MinJun");
+        sb.insert(6, " ");
+        String result = sb.toString();
+        System.out.println(result);
+        System.out.println(sb.substring(0,6));
     }
 }
 /* 블록주석 : 블록단위(클래스, 메서드)등을 설명할때 주로 사용 */

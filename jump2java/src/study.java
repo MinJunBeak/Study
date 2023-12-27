@@ -114,6 +114,13 @@ public class study {
         String result = sb.toString();
         System.out.println(result);
         System.out.println(sb.substring(0,6));
+
+        System.out.println("********배열********");
+        int[] odds = {1, 3, 5, 7, 9};
+        String[] weeks = {"월", "화", "수", "목", "금", "토", "일"};
+        for (int j = 0; j < weeks.length; j++) {
+            System.out.println(weeks[j]);
+        }
     }
 }
 /* 블록주석 : 블록단위(클래스, 메서드)등을 설명할때 주로 사용 */

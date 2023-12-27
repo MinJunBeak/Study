@@ -122,5 +122,40 @@ public class Sample {
         for(CoffeeType type: CoffeeType.values()) {
             System.out.println(type);
         }
+
+        System.out.println("********형 변환과 Final********");
+        String num = "123";
+        // 문자열을 정수로
+        int n = Integer.parseInt(num);
+        System.out.println(n);
+        // 정수를 문자열로
+        String st_num = "" + n;
+        System.out.println(st_num);
+        String num1 = String.valueOf(n);
+        String num2 = Integer.toString(n);
+        System.out.println(num1);
+        System.out.println(num2);
+        // 실수 형태의 문자열을 실수로
+        String num3 = "123.456";
+        double d = Double.parseDouble(num3);
+        System.out.println(d);
+        // 정수를 실수로
+        int n1 = 123;
+        double d1 = n1;
+        System.out.println(d1);
+        // 실수를 정수로
+        double d2 = 123.456;
+        int n2 = (int) d2;
+        System.out.println(n2);
+        // 실수 형태의 문자열을 정수로 바꾸려면 실수로 변경후 정수로 바꾸면 됨.
+        double n3 = Double.parseDouble(num3);
+        int n4 = (int) n3;
+        System.out.println(n4);
+
+        // final은 자료형의 값을 단 한번만 설정하고 다시 설정이 불가능한것.
+        final int n5 = 123;
+        // n5 = 456; // final로 설정했기 때문에 바꿀수 없음
+        final ArrayList<String> a = new ArrayList<>(Arrays.asList("a", "b"));
+        // a = new ArrayList<>(Arrays.asList("c", "d")); // 리스트도 마찬가지
     }
 }

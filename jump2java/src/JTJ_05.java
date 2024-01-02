@@ -7,7 +7,21 @@ class Animal{
         // this는 클래스에 의해서 생성된 객체를 지칭(즉 cat.name = "boby")
         this.name = name;
     }
+}
 
+class Dog extends Animal {
+    void sleep(){
+        System.out.println(this.name+" zzz");
+    }
+}
+
+class HouseDog extends Dog{
+    void sleep(){ // 메서드 오버라이딩
+        System.out.println(this.name + " zzz in house");
+    }
+    void sleep(int hour){
+        System.out.println(this.name+" zzz in house for " + hour + "hours");
+    }
 }
 
 public class JTJ_05 {
@@ -123,6 +137,22 @@ public class JTJ_05 {
         System.out.println(sample.number);
         System.out.println("********값에 의한 호출과 객체에 의한 호출********");
 
+        System.out.println("********상속********");
+        Dog dog1 = new Dog();
+        dog1.setName("poppy");
+        System.out.println(dog1.name);
+        dog1.sleep();
+        Animal dog2 = new Dog(); // 상속관계에 있으므로 부모클래스의 자료형인것처럼 사용 가능
+        dog2.setName("puppy");
+        // dog2.sleep(); // Animal 타입으로 선언되었기 때문에 Animal 클래스에 정의된 멤버만 접근이 가능
+        System.out.println(dog2.name);
+        HouseDog houseDog = new HouseDog();
+        houseDog.setName("happy");
+        houseDog.sleep();
+        houseDog.sleep(3);
+        Dog cho = new HouseDog();
+        cho.setName("gogo");
+        cho.sleep();
     }
 }
 class Calculator{
